@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My E-Commerce Store</h1>
+        <a href="/register"><h4>Register</h4></a> 
+    </header>
+
+    <div class="product-container">
+        <img class="product-image" src="{% static 'images/jd1 (1).jpg' %}" alt="Product Image">
+        <h2>Olacash store</h2>
+        <p>Description: The shoe you won't regret having.</p>
+        <p>Price: $19.99</p>
+        <button>Add to Cart</button>
+    </div>
+</body>
+</html>

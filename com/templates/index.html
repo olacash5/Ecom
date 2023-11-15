@@ -36,9 +36,16 @@
     </style>
 </head>
 <body>
+    {% block content %}
     <header>
         <h1>My E-Commerce Store</h1>
-        <a href="/register"><h4>Register</h4></a> 
+        {% if user.is_authenticated %}
+        <h4>Hello, {{user.username}}</h4>
+        <a href="accounts/logout"><h4>Logout</h4></a>
+        {% else %}
+        <a href="accounts/register"><h4>Register</h4></a> 
+        <a href="accounts/login"><h4>Login</h4></a>
+        {% endif %}        
     </header>
 
     <div class="product-container">
@@ -46,7 +53,8 @@
         <h2>Olacash store</h2>
         <p>Description: The shoe you won't regret having.</p>
         <p>Price: $19.99</p>
-        <button>Add to Cart</button>
+        <button type="add">Add to Cart</button>
     </div>
+    {% endblock content %}
 </body>
 </html>

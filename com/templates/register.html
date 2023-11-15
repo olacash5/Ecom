@@ -55,11 +55,17 @@
 <body>
     <header>
         <h1>My E-Commerce Store</h1>
-        <a href="/index"><h4>Register</h4></a> 
+        <a href="/index"><h4>HOME</h4></a> 
     </header>
     {% block content %}
-    <form action="{% url 'register' %}" method="post" >
+    <form action="register" method="post" class="register" >
         {% csrf_token %}
+        <label for="firstname">Firstname:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="lastname">Lastname:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -74,7 +80,7 @@
 
         <button type="submit" >Register</button>
     </form>
-    <div class="register2">
+    <div class="register">
         <p>
             Already Have An Account?  <a href="login">Sign in</a>
         </p>

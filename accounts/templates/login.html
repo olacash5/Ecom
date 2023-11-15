@@ -1,0 +1,79 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/account.css' %}">
+    <title>login</title>
+    <style>        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<header>
+    <h1>My E-Commerce Store</h1>
+    <a href="/index"><h4>Register</h4></a>
+    <a href="/index">HOME</a>
+</header>
+{% block content %}
+<body class="fola">
+    
+    
+    <form action="login" method="post" class="fola1"> 
+        {% csrf_token %}
+        <div class="fola1">
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="submit" name="log in" placeholder="log in" id="one">
+        </div>
+    </form>
+    <div>
+        {% for messages in messages %}
+        <h3>{{messages}}</h3>
+        {% endfor %}
+    </div> 
+   <h4><a href="#" class="forgot">forgot password?</a></h4>
+    {% endblock content %}
+</body>
+</html>

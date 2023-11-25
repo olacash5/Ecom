@@ -33,38 +33,16 @@
             height: auto;
             margin-bottom: 20px;
         }
-        .add_to_cart{
-            background-color:red;
-            max-width:100px;
-            text-align:center;
-            padding:10px;
-        }
     </style>
 </head>
 <body>
     {% block content %}
     <header>
-       <h1>My E-Commerce Store</h1>
-        {% if user.is_authenticated %}
-        <h4>Hello, {{user.username}}</h4>
-        <a href="accounts/logout"><h4>Logout</h4></a>
-        {% else %}
-        <a href="accounts/register"><h4>Register</h4></a> 
-        <a href="accounts/login"><h4>Login</h4></a>
-        {% endif %}         
-        <a href="contact"><h4>Contact us</h4></a>
+        <h1>My E-Commerce Store</h1>
+        <a href='index'>HOME</a>
     </header>
+    
 
-    <div class="product-container">
-        <img class="product-image" src="{% static 'images/jd1 (1).jpg' %}" alt="Product Image">
-        <h2>Olacash store</h2>
-        <p>Description: The shoe you won't regret buying.</p>
-        <p>Price: $99.99</p>
-        <div class='add_to_cart'>
-            <a href='cart'type="submit" >Add to Cart</a>
-        </div>
-        
-    </div>
     {% endblock content %}
 </body>
 </html>

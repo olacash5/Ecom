@@ -9,5 +9,12 @@ from django.contrib.auth.models import User, auth
 
 
 def index(request):
-    # if request.method == "POST":
     return render(request, "index.html")
+
+
+def cart(request):
+    return render(request, "cart.html")
+
+
+def contact(request):
+    return render(request, "contact.html")

@@ -33,6 +33,18 @@
             height: auto;
             margin-bottom: 20px;
         }
+        form{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 30px;
+        }
+        .same{
+            margin: 10px;
+        }
+        textarea{
+            height: 100px;
+        }
     </style>
 </head>
 <body>
@@ -42,10 +54,10 @@
         <a href='index'>HOME</a>
     </header>
     <form>
-        <input>Name</input>
-        <input>Phone</input>
-        <input>Email</input>
-        <textarea></textarea>
+        <input placeholder="Name" class="same"></input>
+        <input placeholder="Phone" class="same"></input>
+        <input placeholder="Email" class="same"></input>
+        <textarea placeholder="textarea" class="same"></textarea>
     </form>
     {% endblock content %}
 </body>

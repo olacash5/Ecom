@@ -18,8 +18,18 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            display: flex;
+            
         }
-
+        .head{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            left: 600px;    
+        }
+        .head > a{
+            margin: 10px;
+        }
         .product-container {
             max-width: 800px;
             margin: 20px auto;
@@ -46,7 +56,10 @@
     {% block content %}
     <header>
         <h1>My E-Commerce Store</h1>
-        <a href='index' class="sit">HOME</a>
+        <di class="head">
+            <a href='index' class="sit"><h4>HOME</h4></a>
+        </div>
+        
     </header>
     
     <img>{{user.picture}}</img>

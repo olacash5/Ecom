@@ -18,8 +18,19 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            display: flex;
+            
         }
-
+        .head{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            left: 600px;    
+        }
+        .head > a{
+            margin: 10px;
+            color: #fff;
+        }
         form {
             background-color: #fff;
             padding: 20px;
@@ -55,7 +66,11 @@
 <body>
     <header>
         <h1>My E-Commerce Store</h1>
-        <a href="/index"><h4>HOME</h4></a> 
+        <div class="head">
+            <a href="/index"><h4>HOME</h4></a>
+            <a href="/accounts/login"><h4>LOGIN</h4></a>
+        </div>
+         
     </header>
     {% block content %}
     <form action="register" method="post" class="register" >

@@ -18,6 +18,17 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            display: flex;
+            
+        }
+        .head{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            left: 600px;    
+        }
+        .head > a{
+            margin: 10px;
         }
         a{
             color: #fff;
@@ -48,6 +59,7 @@
     {% block content %}
     <header>
        <h1>My E-Commerce Store</h1>
+       <div class="head">
         {% if user.is_authenticated %}
         <h4>Hello, {{user.username}}</h4>
         <a href="accounts/logout"><h4>Logout</h4></a>
@@ -57,6 +69,8 @@
         <a href="accounts/login"><h4>Login</h4></a>
         {% endif %}         
         <a href="contact"><h4>Contact us</h4></a>
+       </div>
+        
     </header>
 
     <div class="product-container">

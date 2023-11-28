@@ -18,6 +18,18 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            display: flex;
+            
+        }
+        .head{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            left: 800px;    
+        }
+        .head > a{
+            margin: 10px;
+            color: #fff;
         }
 
         .product-container {
@@ -33,15 +45,37 @@
             height: auto;
             margin-bottom: 20px;
         }
+        .cart{
+            display: flex;
+            padding: 30px;
+        }
+        .cart > h3{
+            margin-left: 200px;
+        }
     </style>
 </head>
 <body>
     {% block content %}
     <header>
-        <h1>My E-Commerce Store</h1>
-        <a href='index'>HOME</a>
+        <h1>My Cart</h1>
+        <div class="head">
+            <a href='index'><h4>HOME</h4></a>
+        </div>
     </header>
-    
+    <div class="cart">
+        <h3>
+            PRODUCT
+        </h3>
+        <h3>
+            PRICE
+        </h3>
+        <h3>
+            QUANTITY
+        </h3>
+        <h3>
+            TOTAL
+        </h3>
+    </div>
 
     {% endblock content %}
 </body>

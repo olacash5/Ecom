@@ -18,8 +18,19 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+            display: flex;
+            
         }
-
+        .head{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            left: 600px;    
+        }
+        .head > a{
+            margin: 10px;
+            color: #fff;
+        }
         .product-container {
             max-width: 800px;
             margin: 20px auto;
@@ -51,7 +62,10 @@
     {% block content %}
     <header>
         <h1>My E-Commerce Store</h1>
-        <a href='index'>HOME</a>
+        <div class="head">
+            <a href='index'><h4>HOME</h4></a>
+        </div>
+        
     </header>
     <form>
         <input placeholder="Name" class="same"></input>

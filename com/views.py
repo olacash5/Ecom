@@ -18,3 +18,27 @@ def cart(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+
+def customer_profile(request):
+    return render(request, "customer_profile.html")
+
+
+def my_wallet(request):
+    return render(request, "my_wallet.html")
+
+
+def my_reward(request):
+    return render(request, "my_reward.html")
+
+
+def my_order(request):
+    return render(request, "my_order.html")
+
+
+def payment_method(request):
+    return render(request, "payment_method.html")
+
+
+def personal_information(request):
+    return render(request, "personal_information.html")

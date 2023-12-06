@@ -40,5 +40,5 @@ def payment_method(request):
     return render(request, "payment_method.html")
 
 
-def personal_information(request):
-    return render(request, "personal_information.html")
+def boolean(request):
+    return render(request, "boolean.html")

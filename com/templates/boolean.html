@@ -29,11 +29,8 @@
         }
         .head > a{
             margin: 10px;
-        }
-        a{
             color: #fff;
         }
-
         .product-container {
             max-width: 800px;
             margin: 20px auto;
@@ -47,42 +44,41 @@
             height: auto;
             margin-bottom: 20px;
         }
-        .add_to_cart{
-            background-color:red;
-            max-width:100px;
-            text-align:center;
-            padding:10px;
+        form{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 30px;
+        }
+        .same{
+            margin: 10px;
+        }
+        textarea{
+            height: 100px;
         }
     </style>
 </head>
 <body>
     {% block content %}
     <header>
-       <h1>My E-Commerce Store</h1>
-       <div class="head">
-        {% if user.is_authenticated %}
-        <h4>Hello, {{user.username}}</h4>
-        <a href="accounts/logout"><h4>Logout</h4></a>
-        <a href="boolean"><h4>Profile</h4></a>
-        {% else %}
-        <a href="accounts/signup"><h4>Register</h4></a> 
-        <a href="accounts/login"><h4>Login</h4></a>
-        {% endif %}         
-        <a href="contact"><h4>Contact us</h4></a>
-       </div>
-        
-    </header>
-
-    <div class="product-container">
-        <img class="product-image" src="{% static 'images/jd1 (1).jpg' %}" alt="Product Image">
-        <h2>Olacash store</h2>
-        <p>Description: The shoe you won't regret buying.</p>
-        <p>Price: $99.99</p>
-        <div class='add_to_cart'>
-            <a href='cart'type="submit" >Add to Cart</a>
+        <h1>My E-Commerce Store</h1>
+        <div class="head">
+            <a href='index'><h4>HOME</h4></a>
         </div>
         
-    </div>
+    </header>
+    <form method="POST">
+        {% csrf_token %}
+       <select name="user_status">
+            <option>
+                BUYER
+            </option>
+            <option>
+                SELLER
+            </option>
+        </select>
+        <p><button>Proceed</button></p>
+    </form>
     {% endblock content %}
 </body>
 </html>
